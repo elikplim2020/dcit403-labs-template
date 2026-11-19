@@ -1,0 +1,37 @@
+========================================================================
+DCIT 403 Lab 2 - ReAct agent trace
+Question     : I have GHS 1,200. I want 4 bags of rice at GHS 185 each and 3 gallons of oil at GHS 95 each. How much will I have left?
+MODEL SOURCE : scripted rehearsal  (budget in scripted_model.py - no provider call, not submittable evidence)
+Started      : 2026-11-19T14:42:05+00:00
+Step limit   : 6
+========================================================================
+
+--- step 1 ---
+Thought: I need the total cost first: 4 bags of rice at GHS 185 plus 3 gallons of oil at GHS 95.
+Action: calculator
+Action Input: 4*185 + 3*95
+
+[OBSERVATION (from calculator, 0 ms)]
+1025
+
+--- step 2 ---
+Thought: The total cost is GHS 1,025. Now I subtract that from the GHS 1,200 budget.
+Action: calculator
+Action Input: 1200 - 1025
+
+[OBSERVATION (from calculator, 0 ms)]
+175
+
+--- step 3 ---
+Thought: I have the answer.
+Action: finish
+Action Input: You will have GHS 175 left from your GHS 1,200.
+
+========================================================================
+STATUS       : finished
+STEPS        : 3 of 6
+TOOLS        : calculator(2)
+TOKENS       : 0 prompt + 0 completion = 0 total
+ELAPSED      : 0.0 s
+FINAL ANSWER : You will have GHS 175 left from your GHS 1,200.
+========================================================================

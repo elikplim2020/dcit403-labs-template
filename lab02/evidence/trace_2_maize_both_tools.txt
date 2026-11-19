@@ -1,0 +1,45 @@
+========================================================================
+DCIT 403 Lab 2 - ReAct agent trace
+Question     : I have GHS 500. I want 3 bags of maize at GHS 90 each and I must pay GHS 120 for transport. How much is left, and what is the capital of the Bono East Region?
+MODEL SOURCE : scripted rehearsal  (both_tools_maize in scripted_model.py - no provider call, not submittable evidence)
+Started      : 2026-11-19T14:42:05+00:00
+Step limit   : 6
+========================================================================
+
+--- step 1 ---
+Thought: First the cost of the maize: 3 bags at GHS 90 each.
+Action: calculator
+Action Input: 3*90
+
+[OBSERVATION (from calculator, 0 ms)]
+270
+
+--- step 2 ---
+Thought: That is GHS 270 for maize. The transport is GHS 120, so I subtract both from the GHS 500.
+Action: calculator
+Action Input: 500 - 270 - 120
+
+[OBSERVATION (from calculator, 0 ms)]
+110
+
+--- step 3 ---
+Thought: I still need the capital of the Bono East Region. I will look it up rather than guess.
+Action: wiki_lookup
+Action Input: Bono East Region
+
+[OBSERVATION (from wiki_lookup, 817 ms)]
+The Bono East region of Ghana is a new region carved out of the Brong Ahafo region. The capital of the new region is Techiman. This creation of this new region was in fulfillment of a promise made by the New Patriotic Party prior to the 2016 Ghana general election. Upon winning the elections, the President, Nana Akuffo Addo created the Ministry of Regional Reorganization to oversee policy formulation and implementation. In all six new regions are to be created from the existing ten regions of Ghana. The other regions are Ahafo, Western North, Savannah, North East, and Oti regions.
+
+--- step 4 ---
+Thought: The summary names the capital as Techiman, and I have the money answer. I can finish.
+Action: finish
+Action Input: You have GHS 110 left after the maize and the transport. The capital of the Bono East Region is Techiman.
+
+========================================================================
+STATUS       : finished
+STEPS        : 4 of 6
+TOOLS        : calculator(2), wiki_lookup(1)
+TOKENS       : 0 prompt + 0 completion = 0 total
+ELAPSED      : 0.8 s
+FINAL ANSWER : You have GHS 110 left after the maize and the transport. The capital of the Bono East Region is Techiman.
+========================================================================

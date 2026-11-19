@@ -1,0 +1,37 @@
+========================================================================
+DCIT 403 Lab 2 - ReAct agent trace
+Question     : me get 1200 cedis want buy rice four bag 185 each how much remain
+MODEL SOURCE : scripted rehearsal  (badly_worded in scripted_model.py - no provider call, not submittable evidence)
+Started      : 2026-11-19T14:42:09+00:00
+Step limit   : 6
+========================================================================
+
+--- step 1 ---
+Thought: The wording is broken, but it looks like 4 bags of rice at GHS 185 each from GHS 1,200, so I read it as 1200 - 4*185.
+Action: Calculator
+Action Input: 1200 - 4*185
+
+[OBSERVATION (from Calculator, 0 ms)]
+Error: unknown tool 'Calculator'. Did you mean 'calculator'? Available tools: calculator, wiki_lookup. Use exactly one of these names, or finish.
+
+--- step 2 ---
+Thought: The action name was rejected as unknown, so I must use the exact name calculator.
+Action: calculator
+Action Input: 1200 - 4*185
+
+[OBSERVATION (from calculator, 0 ms)]
+460
+
+--- step 3 ---
+Thought: The sum gives GHS 460 left. I can finish.
+Action: finish
+Action Input: Reading your question as 4 bags of rice at GHS 185 each from GHS 1,200, you will have GHS 460 left.
+
+========================================================================
+STATUS       : finished
+STEPS        : 3 of 6
+TOOLS        : calculator(1)
+TOKENS       : 0 prompt + 0 completion = 0 total
+ELAPSED      : 0.0 s
+FINAL ANSWER : Reading your question as 4 bags of rice at GHS 185 each from GHS 1,200, you will have GHS 460 left.
+========================================================================

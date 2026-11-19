@@ -1,0 +1,21 @@
+========================================================================
+DCIT 403 Lab 2 - ReAct agent trace
+Question     : Greet a trader at Makola Market and wish them good sales today, in one sentence.
+MODEL SOURCE : scripted rehearsal  (no_tool in scripted_model.py - no provider call, not submittable evidence)
+Started      : 2026-11-19T14:42:09+00:00
+Step limit   : 3
+========================================================================
+
+--- step 1 ---
+Thought: This only needs a sentence of friendly text, so no tool is needed and I can finish now.
+Action: finish
+Action Input: Good morning, and may you have good sales at Makola Market today.
+
+========================================================================
+STATUS       : finished
+STEPS        : 1 of 3
+TOOLS        : none
+TOKENS       : 0 prompt + 0 completion = 0 total
+ELAPSED      : 0.0 s
+FINAL ANSWER : Good morning, and may you have good sales at Makola Market today.
+========================================================================

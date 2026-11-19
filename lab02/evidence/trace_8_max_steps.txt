@@ -1,0 +1,43 @@
+========================================================================
+DCIT 403 Lab 2 - ReAct agent trace
+Question     : Check that the calculator still works for me.
+MODEL SOURCE : scripted rehearsal  (never_finishes in scripted_model.py - no provider call, not submittable evidence)
+Started      : 2026-11-19T14:42:09+00:00
+Step limit   : 3
+========================================================================
+
+--- step 1 ---
+Thought: I will add one more small number to check the calculator.
+Action: calculator
+Action Input: 1 + 1
+
+[OBSERVATION (from calculator, 0 ms)]
+2
+
+--- step 2 ---
+Thought: Let me check another sum while I am here.
+Action: calculator
+Action Input: 2 + 2
+
+[OBSERVATION (from calculator, 0 ms)]
+4
+
+--- step 3 ---
+Thought: One more check cannot hurt.
+Action: calculator
+Action Input: 3 + 3
+
+[OBSERVATION (from calculator, 0 ms)]
+6
+
+[NOTE]
+I stopped after 3 steps without reaching a final answer. Last thing I saw: 6
+
+========================================================================
+STATUS       : max_steps
+STEPS        : 3 of 3
+TOOLS        : calculator(3)
+TOKENS       : 0 prompt + 0 completion = 0 total
+ELAPSED      : 0.0 s
+FINAL ANSWER : I stopped after 3 steps without reaching a final answer. Last thing I saw: 6
+========================================================================

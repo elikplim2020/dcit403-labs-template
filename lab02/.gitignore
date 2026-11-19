@@ -1,0 +1,13 @@
+# Local secrets and interpreter noise for the lab02 folder.
+# The repository .gitignore already covers .env; this keeps the lab folder safe if
+# it is copied into another repository.
+.env
+.env.*
+!.env.example
+*.key
+.groqkey
+*.token
+*.pyc
+__pycache__/
+.venv/
+.pytest_cache/
