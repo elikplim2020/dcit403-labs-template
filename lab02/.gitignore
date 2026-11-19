@@ -3,7 +3,6 @@
 # it is copied into another repository.
 .env
 .env.*
-!.env.example
 *.key
 .groqkey
 *.token
